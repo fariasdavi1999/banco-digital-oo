@@ -3,6 +3,7 @@
 out/
 !**/src/main/**/out/
 !**/src/test/**/out/
+banco-digital-oo.iml
 
 ### Eclipse ###
 .apt_generated
