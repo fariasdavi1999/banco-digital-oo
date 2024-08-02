@@ -1,3 +1,7 @@
+package src.main.java.dev.davi.model.bank;
+
+import src.main.java.dev.davi.model.account.Conta;
+
 import java.util.List;
 
 public class Banco {

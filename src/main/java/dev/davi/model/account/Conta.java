@@ -1,3 +1,7 @@
+package src.main.java.dev.davi.model.account;
+
+import src.main.java.dev.davi.service.impl.IConta;
+import src.main.java.dev.davi.model.client.Cliente;
 
 public abstract class Conta implements IConta {
 	

@@ -1,3 +1,4 @@
+package src.main.java.dev.davi.model.client;
 
 public class Cliente {
 
