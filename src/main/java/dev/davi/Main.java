@@ -3,22 +3,21 @@ package src.main.java.dev.davi;
 import src.main.java.dev.davi.accounts.ContaCorrente;
 import src.main.java.dev.davi.accounts.ContaPoupanca;
 import src.main.java.dev.davi.model.client.Cliente;
-import src.main.java.dev.davi.model.account.Conta;
 
 public class Main {
 
 	public static void main(String[] args) {
-		Cliente venilton = new Cliente();
-		venilton.setNome("Venilton");
+		Cliente clienteUm = new Cliente();
+		clienteUm.setNome("Davi");
 		
-		Conta cc = new ContaCorrente(venilton);
-		Conta poupanca = new ContaPoupanca(venilton);
+		ContaCorrente contaCorrente = new ContaCorrente(clienteUm);
+		ContaPoupanca contaPoupanca = new ContaPoupanca(clienteUm);
 
-		cc.depositar(100);
-		cc.transferir(100, poupanca);
-		
-		cc.imprimirExtrato();
-		poupanca.imprimirExtrato();
+		contaCorrente.depositar(100);
+		contaCorrente.transferir(100, contaPoupanca);
+
+		contaCorrente.imprimirExtrato();
+		contaPoupanca.imprimirExtrato();
 	}
 
 }
