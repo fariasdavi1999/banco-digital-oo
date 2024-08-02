@@ -28,22 +28,6 @@ public abstract class Conta implements IConta {
 		System.out.println("Saldo: " + this.saldo);
 	}
 
-	public int getAgencia() {
-		return agencia;
-	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-	public TipoConta getTipoConta() {
-		return tipoConta;
-	}
-
 	public void setTipoConta(TipoConta tipoConta) {
 		this.tipoConta = tipoConta;
 	}
