@@ -11,7 +11,7 @@ public class ContaPoupanca extends Conta {
 
 	@Override
 	public void imprimirExtrato() {
-		System.out.println("=== Extrato src.main.java.dev.davi.model.conta.Conta Poupan�a ===");
+		System.out.println("=== Extrato Conta Poupanca ===");
 		super.imprimirInfosComuns();
 	}
 }

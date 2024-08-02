@@ -11,7 +11,7 @@ public class ContaCorrente extends Conta {
 
 	@Override
 	public void imprimirExtrato() {
-		System.out.println("=== Extrato src.main.java.dev.davi.model.conta.Conta Corrente ===");
+		System.out.println("=== Extrato Conta Corrente ===");
 		super.imprimirInfosComuns();
 	}
 	
