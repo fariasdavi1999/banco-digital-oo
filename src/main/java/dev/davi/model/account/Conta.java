@@ -3,7 +3,7 @@ package src.main.java.dev.davi.model.account;
 import src.main.java.dev.davi.model.client.Cliente;
 import src.main.java.dev.davi.service.impl.IConta;
 
-public class Conta implements IConta {
+public abstract class Conta implements IConta {
 
 	private static final int AGENCIA_PADRAO = 1;
 	private static int sequencial = 1;
@@ -17,6 +17,25 @@ public class Conta implements IConta {
 		this.agencia = Conta.AGENCIA_PADRAO;
 		this.numero  = sequencial++;
 		this.cliente = cliente;
+	}
+
+	protected void imprimirInfosComuns() {
+		System.out.println("Titular: " + this.cliente.getNome());
+		System.out.println("Agencia: " + this.agencia);
+		System.out.println("Numero: " + this.numero);
+		System.out.println("Saldo: " + this.saldo);
+	}
+
+	public int getAgencia() {
+		return agencia;
+	}
+
+	public int getNumero() {
+		return numero;
+	}
+
+	public double getSaldo() {
+		return saldo;
 	}
 
 	@Override
@@ -33,29 +52,5 @@ public class Conta implements IConta {
 	public void transferir(double valor, IConta contaDestino) {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
-	}
-
-	@Override
-	public void imprimirExtrato() {
-
-	}
-
-	public int getAgencia() {
-		return agencia;
-	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public double getSaldo() {
-		return saldo;
-	}
-
-	protected void imprimirInfosComuns() {
-		System.out.println(String.format("Titular: %s", this.cliente.getNome()));
-		System.out.println(String.format("Agencia: %d", this.agencia));
-		System.out.println(String.format("Numero: %d", this.numero));
-		System.out.println(String.format("Saldo: %.2f", this.saldo));
 	}
 }
