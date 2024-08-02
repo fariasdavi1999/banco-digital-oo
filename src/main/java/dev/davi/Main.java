@@ -9,11 +9,12 @@ public class Main {
 	public static void main(String[] args) {
 		Cliente clienteUm = new Cliente();
 		clienteUm.setNome("Davi");
-		
+
 		ContaCorrente contaCorrente = new ContaCorrente(clienteUm);
 		ContaPoupanca contaPoupanca = new ContaPoupanca(clienteUm);
 
 		contaCorrente.depositar(100);
+		contaCorrente.imprimirExtrato();
 		contaCorrente.transferir(100, contaPoupanca);
 
 		contaCorrente.imprimirExtrato();
