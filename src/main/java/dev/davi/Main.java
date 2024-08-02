@@ -1,3 +1,9 @@
+package src.main.java.dev.davi;
+
+import src.main.java.dev.davi.accounts.ContaCorrente;
+import src.main.java.dev.davi.accounts.ContaPoupanca;
+import src.main.java.dev.davi.model.client.Cliente;
+import src.main.java.dev.davi.model.account.Conta;
 
 public class Main {
 
