@@ -13,10 +13,9 @@ public class Main {
 		ContaCorrente contaCorrente = new ContaCorrente(clienteUm);
 		ContaPoupanca contaPoupanca = new ContaPoupanca(clienteUm);
 
-		contaCorrente.depositar(100);
+		contaCorrente.depositar(100, contaCorrente);
 		contaCorrente.imprimirExtrato();
-		contaCorrente.transferir(100, contaPoupanca);
-
+		contaCorrente.transferir(101, contaPoupanca);
 		contaCorrente.imprimirExtrato();
 		contaPoupanca.imprimirExtrato();
 	}
