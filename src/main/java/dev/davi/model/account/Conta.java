@@ -1,10 +1,10 @@
 package src.main.java.dev.davi.model.account;
 
-import src.main.java.dev.davi.service.impl.IConta;
 import src.main.java.dev.davi.model.client.Cliente;
+import src.main.java.dev.davi.service.impl.IConta;
 
-public abstract class Conta implements IConta {
-	
+public class Conta implements IConta {
+
 	private static final int AGENCIA_PADRAO = 1;
 	private static int sequencial = 1;
 
@@ -15,7 +15,7 @@ public abstract class Conta implements IConta {
 
 	protected Conta(Cliente cliente) {
 		this.agencia = Conta.AGENCIA_PADRAO;
-		this.numero = sequencial++;
+		this.numero  = sequencial++;
 		this.cliente = cliente;
 	}
 
@@ -33,6 +33,11 @@ public abstract class Conta implements IConta {
 	public void transferir(double valor, IConta contaDestino) {
 		this.sacar(valor);
 		contaDestino.depositar(valor);
+	}
+
+	@Override
+	public void imprimirExtrato() {
+
 	}
 
 	public int getAgencia() {
